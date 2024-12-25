@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payload Manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 500px;
+        height: 400px;
+        overflow-y: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .table {
+        max-height: 200px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: left;
+        word-break: break-all; /* Ensure long payloads wrap properly */
+      }
+      thead {
+        background-color: #f1f1f1;
+      }
+      input {
+        width: 55%;
+        padding: 10px 5px;
+      }
+      #payloadType {
+        width: 20%;
+        padding: 10px 5px;
+      }
+      button {
+        padding: 10px 5px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      #header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 5px;
+      }
+      #header img {
+        width: 30px;
+        height: 30px;
+      }
+      .input-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+      }
+      .delete-btn {
+        color: red;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="header">
+        <img src="ico.png" alt="Payload Manager Icon" />
+        <h3>Payload Manager</h3>
+      </div>
+      <p>Create and inject payloads easily.</p>
+    </div>
+    <div>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Payload</th>
+              <th>Type</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="payloadTable"></tbody>
+        </table>
+      </div>
+      <div class="input-container">
+        <input type="text" id="payloadInput" placeholder="Add new payload..." />
+        <input type="text" id="payloadType" placeholder="Payload type..." />
+        <button id="addPayload">Add Payload</button>
+      </div>
+    </div>
+    <footer>
+      <p>Built By Sherwood Chaser</p>
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>
