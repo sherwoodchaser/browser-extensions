@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Payload Manager",
+  "author": "Sherwood Chaser",
+  "version": "1.0",
+  "description": "Create and inject payloads easily.",
+  "permissions": ["contextMenus", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "ico.png",
+      "48": "ico.png",
+      "128": "ico.png"
+    }
+  },
+  "icons": {
+    "16": "ico.png",
+    "48": "ico.png",
+    "128": "ico.png"
+  }
+}
